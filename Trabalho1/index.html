@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+  <title>Alunos</title>
+</head>
+<body>
+  <div class="container">
+    <h1>Alunos</h1>
+    <div class="linha"></div>
+    <div class="busca">
+      <input type="text" id="busca" placeholder="Pesquisar...">
+    </div>
+    <div class="tabela">
+      <table id="tabela">
+        <thead>
+          <tr>
+            <th>NOME</th>
+            <th>NOTA</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+    <div class="novoAluno">
+      <h1>Novo Aluno</h1>
+      <div class="linha"></div>
+      <div class="formulario">
+        <div class="entrada">
+          <label for="nomeAluno">Nome:</label>
+          <input type="text" id="nomeAluno" placeholder="Digite o nome do aluno">
+        </div>
+        <div class="entrada">
+          <label for="notaAluno">Nota:</label>
+          <input type="text" id="notaAluno" placeholder="Digite a nota do aluno">
+        </div>
+        <input type="submit" value="Adicionar" id="botao">
+      </div>
+    </div>
+    <div id="mensagensErro" class="mensagens-erro"></div>
+  </div>
+</body>
+</html>

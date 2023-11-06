@@ -1,0 +1,63 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem 5rem;
+  }
+  
+  .container .linha {
+    border-top: 2px solid #eee;
+  }
+  
+  .container .busca {
+    display: flex;
+    gap: 0.5rem;
+    width: 20%;
+    margin-top: 1rem;
+  }
+  
+  .container .busca input {
+    height: 2rem;
+  }
+  
+  .container .tabela {
+    width: 100%;
+    margin: 0 auto;
+  }
+  
+  .container .tabela table {
+    width: 100%;
+  }
+  
+  .container .tabela table thead {
+    height: 3rem;
+    background-color: #eee;
+  }
+  
+  .container .tabela table tbody tr {
+    height: 2rem;
+    text-align: center;
+  }
+  
+  .container .novoAluno .formulario {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 20%;
+  }
+  
+  .container .formulario .entrada {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .container .formulario #botao {
+    width: 40%;
+  }
+  

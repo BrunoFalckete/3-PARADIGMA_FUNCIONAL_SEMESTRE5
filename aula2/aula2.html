@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Soma de Números</title>
+    <script>
+        function somar() {
+            var valor1 = parseFloat(document.getElementById('valor1').value);
+            var valor2 = parseFloat(document.getElementById('valor2').value);
+
+            if (!isNaN(valor1) && !isNaN(valor2)) {
+                var resultado = valor1 + valor2;
+                document.getElementById('resultado').innerHTML = 'Resultado: ' + resultado;
+            } else {
+                document.getElementById('resultado').innerHTML = 'Digite valores válidos.';
+            }
+        }
+
+        function limpar() {
+            document.getElementById('valor1').value = '';
+            document.getElementById('valor2').value = '';
+            document.getElementById('resultado').innerHTML = 'Resultado: ';
+        }
+    </script>
+</head>
+<body>
+    <h1>Soma de Números</h1>
+    <label for="valor1">Valor 1:</label>
+    <input type="text" id="valor1"><br><br>
+
+    <label for="valor2">Valor 2:</label>
+    <input type="text" id="valor2"><br><br>
+
+    <button onclick="somar()">Somar</button>
+    <button onclick="limpar()">Limpar</button>
+
+    <p id="resultado">Resultado:</p>
+</body>
+</html>

@@ -1,0 +1,7 @@
+-Ao preencher os campos e pressionar o botão adicionar, os dados devem ser exibidos na tabela abaixo;
+
+-Emitir a validação como no exemplo, caso o botão adicionar seja pressionado e os campos estejam em branco; 
+
+-O campo nota deve aceitar apenas valores de zero a dez;
+
+Obs: O filtrar não precisa ser implementado por enquanto.
