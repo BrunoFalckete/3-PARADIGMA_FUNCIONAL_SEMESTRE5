@@ -1,0 +1,104 @@
+/* Define o estilo básico para o corpo da página */
+body {
+    font-family: Arial, sans-serif; /* Define a fonte para o corpo do texto */
+    margin: 20px; /* Define as margens ao redor do corpo da página */
+    background-color: #f4f4f4; /* Define a cor de fundo da página */
+}
+
+/* Estilos para o cabeçalho de nível 1 (h1) */
+h1 {
+    text-align: center; /* Centraliza o texto */
+    color: #333; /* Define a cor do texto */
+}
+
+/* Estilos para as etiquetas (labels) */
+label {
+    display: block; /* Faz com que as etiquetas se comportem como blocos */
+    margin-bottom: 8px; /* Define a margem inferior */
+    font-size: 16px; /* Define o tamanho da fonte */
+    color: #333; /* Define a cor do texto */
+}
+
+/* Estilos para os campos de entrada (inputs) */
+input {
+    width: 100%; /* Define a largura total */
+    padding: 8px; /* Adiciona preenchimento interno */
+    font-size: 14px; /* Define o tamanho da fonte */
+    margin-bottom: 12px; /* Define a margem inferior */
+    box-sizing: border-box; /* Inclui a largura da borda e do preenchimento na largura total */
+}
+
+/* Estilos para os botões */
+button {
+    display: block; /* Faz com que os botões se comportem como blocos */
+    width: 300px; /* Define a largura do botão */
+    margin: 10px auto; /* Centraliza o botão horizontalmente com margem superior e inferior de 10px */
+    padding: 15px; /* Adiciona preenchimento interno */
+    font-size: 18px; /* Define o tamanho da fonte */
+    cursor: pointer; /* Adiciona um cursor ao passar o mouse */
+    background-color: #4CAF50; /* Define a cor de fundo do botão */
+    color: white; /* Define a cor do texto do botão */
+    border: none; /* Remove a borda do botão */
+    border-radius: 4px; /* Adiciona bordas arredondadas */
+    transition: background-color 0.3s ease; /* Adiciona uma transição suave na mudança de cor de fundo */
+}
+
+/* Efeito hover para os botões */
+button:hover {
+    background-color: #45a049; /* Nova cor de fundo ao passar o mouse sobre o botão */
+}
+
+/* Remove a borda de foco nos botões */
+button:focus {
+    outline: none;
+}
+
+/* Estilos alternativos para botões ímpares */
+button:nth-child(odd) {
+    background-color: #3498db; /* Cor de fundo alternativa para botões ímpares */
+}
+
+/* Efeito hover para botões ímpares */
+button:nth-child(odd):hover {
+    background-color: #2980b9; /* Nova cor de fundo ao passar o mouse sobre botões ímpares */
+}
+
+/* Estilos para a área de saída (output) */
+#output {
+    margin-top: 20px; /* Define a margem superior */
+    padding: 15px; /* Adiciona preenchimento interno */
+    font-size: 18px; /* Define o tamanho da fonte */
+    color: #333; /* Define a cor do texto */
+    background-color: #f8f8f8; /* Define a cor de fundo */
+    border: 1px solid #ddd; /* Adiciona uma borda sólida */
+    border-radius: 4px; /* Adiciona bordas arredondadas */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra */
+}
+
+/* Estilos para a explicação */
+.explanation {
+    max-width: 900px; /* Define a largura máxima da explicação */
+    margin: 0 auto; /* Centraliza a div horizontalmente */
+    padding: 20px; /* Adiciona preenchimento interno */
+    border: 1px solid #ddd; /* Adiciona uma borda sólida */
+    border-radius: 5px; /* Adiciona bordas arredondadas */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra */
+    background-color: #fff; /* Define a cor de fundo */
+}
+
+/* Estilos para o cabeçalho de nível 2 na explicação */
+.explanation h2 {
+    color: #4CAF50; /* Define a cor do texto do cabeçalho de nível 2 */
+}
+
+/* Estilos para o bloco de código na explicação */
+.explanation pre {
+    background-color: #f2f2f2; /* Define a cor de fundo do bloco de código */
+    padding: 10px; /* Adiciona preenchimento interno */
+    border-radius: 4px; /* Adiciona bordas arredondadas */
+}
+
+/* Estilos para o texto formatado como código */
+code {
+    font-size: 14px; /* Define o tamanho da fonte */
+}

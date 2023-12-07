@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programação Assíncrona</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <div class="explanation" id="explanationAsync">
+        <h2>Programação Assíncrona em JavaScript</h2>
+        <p>Programação assíncrona é essencial para lidar com operações que podem levar algum tempo, como requisições de rede. Em JavaScript, podemos usar funções assíncronas e a palavra-chave <code>await</code> para trabalhar de maneira eficiente com tais operações.</p>
+
+        <h3>Exemplo de Código</h3>
+        <pre>
+        <code>
+        document.addEventListener("DOMContentLoaded", () => {
+            // Obtendo referências para os elementos HTML
+            const fetchDataButton = document.getElementById("fetchDataButton");
+            const outputDiv = document.getElementById("output");
+
+            // Função de callback para processar os dados obtidos
+            const handleDataCallback = (error, data) => {
+                if (error) {
+                    console.error("Erro ao buscar dados:", error);
+                    outputDiv.innerHTML = "<p>Ocorreu um erro ao buscar os dados</p>";
+                } else {
+                    // Exibindo os resultados no HTML
+                    outputDiv.innerHTML = `
+                        <p>UserID: ${data.userId}</p>
+                        <p>ID: ${data.id}</p>
+                        <p>Title: ${data.title}</p>
+                        <p>Completed: ${data.completed}</p>
+                    `;
+                }
+            };
+
+            // Função assíncrona que utiliza uma função de callback
+            const fetchDataWithCallback = (callback) => {
+                // Realizando uma requisição assíncrona usando fetch
+                fetch("https://jsonplaceholder.typicode.com/todos/1")
+                    .then((response) => response.json())
+                    .then((data) => callback(null, data))
+                    .catch((error) => callback(error, null));
+            };
+
+            // Adicionando um evento de clique ao botão
+            fetchDataButton.addEventListener("click", () => {
+                // Chamada da função assíncrona com callback
+                fetchDataWithCallback(handleDataCallback);
+            });
+        });
+        </code>
+        </pre>
+    </div>
+
+    <div class="explanation" id="explanationLambda">
+        <h1>Exemplo de Programação Assíncrona</h1>
+
+        <!-- Botão para acionar a busca de dados assíncronos -->
+        <button id="fetchDataButton">Buscar Dados Assíncronos</button>
+
+        <!-- Div para exibir os resultados da busca -->
+        <div id="output"></div>
+
+        <!-- Botão para voltar para a página inicial -->
+        <button onclick="window.location.href='index.html'">Voltar</button>
+    </div>
+
+    <!-- Inclusão do script JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>

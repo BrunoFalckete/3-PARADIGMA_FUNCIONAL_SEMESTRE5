@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lambda</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+
+    <h1>Lambda</h1>
+
+    <!-- Explicação e exemplos dos conceitos -->
+    <div class="explanation" id="explanationLambda">
+        <h2>Lambda (Arrow Functions) com Entrada de Dados</h2>
+        <p>Expressões lambda são uma forma concisa de escrever funções em JavaScript. Aqui, usamos uma expressão lambda para definir uma função de soma com entrada de dados.</p>
+
+        <h3>Exemplo de Código</h3>
+        <pre>
+        <code>
+        document.addEventListener("DOMContentLoaded", () => {
+            // Definindo uma função de soma usando expressão lambda
+            const soma = (a, b) => a + b;
+
+            // Ação do botão no frontend
+            const button = document.getElementById("myButton");
+            const inputA = document.getElementById("inputA");
+            const inputB = document.getElementById("inputB");
+            const output = document.getElementById("output");
+
+            button.addEventListener("click", () => {
+                // Obtendo valores dos campos de entrada
+                const valorA = parseInt(inputA.value);
+                const valorB = parseInt(inputB.value);
+
+                // Chamada da expressão lambda para realizar a soma
+                const resultadoSoma = soma(valorA, valorB);
+
+                // Exibição do resultado
+                output.textContent = `Resultado da soma: ${resultadoSoma}`;
+            });
+        });
+        </code>
+    </pre>
+    </div>
+
+    <!-- Entradas do usuário -->
+    <div class="explanation" id="explanationLambda">
+        <label for="inputA">Valor de A:</label>
+        <input type="number" id="inputA">
+
+        <label for="inputB">Valor de B:</label>
+        <input type="number" id="inputB">
+
+        <!-- Botão que aciona a operação -->
+        <button id="myButton">Somar</button>
+
+        <!-- Local para exibir o resultado -->
+        <div id="output"></div>
+
+        <!-- Botão para voltar à página index.html -->
+        <button onclick="window.location.href='index.html'">Voltar</button>
+    </div>
+
+    <!-- Importando o script do código JavaScript -->
+    <script src="script.js"></script>
+</body>
+
+</html>

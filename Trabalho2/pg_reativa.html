@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programação Reativa</title>
+    <!-- Incluindo o arquivo de estilo -->
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+    <h1>Programação Reativa</h1>
+
+    <!-- Explicação sobre Programação Reativa com RxJS -->
+    <div class="explanation" id="explanationReactive">
+        <h2>Programação Reativa com RxJS</h2>
+        <p>A programação reativa lida de maneira eficiente com eventos e dados assíncronos. No exemplo abaixo, utilizamos o RxJS para criar um Observable a partir de eventos de clique, demonstrando como a programação reativa pode ser aplicada para reagir a eventos de forma declarativa.</p>
+
+        <h3>Exemplo de Código</h3>
+        <!-- Código JavaScript que utiliza RxJS -->
+        <pre>
+            <code>
+                document.addEventListener("DOMContentLoaded", () => {
+                    const button = document.getElementById("ButtonPR");
+                    const output = document.getElementById("output");
+
+                    // Verificando se o botão foi encontrado
+                    if (button) {
+                        // Adicionando um ouvinte de evento de clique ao botão
+                        button.addEventListener("click", () => {
+                            output.textContent = "Clique detectado!";
+                        });
+                    } else {
+                        console.error(
+                            "Botão não encontrado. Certifique-se de que o ID do botão está correto."
+                        );
+                    }
+                });
+            </code>
+        </pre>
+    </div>
+
+    <!-- Área interativa com o botão reativo e o resultado exibido -->
+    <div class="explanation" id="explanationLambda">
+        <!-- Botão que aciona a programação reativa -->
+        <button id="ButtonPR">Clique-me</button>
+
+        <!-- Local para exibir o resultado -->
+        <div id="output"></div>
+
+        <!-- Botão para voltar para a página Index -->
+        <button onclick="window.location.href='index.html'">Voltar</button>
+    </div>
+
+    <!-- Incluindo o arquivo de script personalizado -->
+    <script src="script.js"></script>
+</body>
+</html>

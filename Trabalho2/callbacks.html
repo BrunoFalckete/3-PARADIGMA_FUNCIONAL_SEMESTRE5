@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo com Callbacks</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+    <h1>Exemplo com Callbacks</h1>
+    <!-- Explicação e exemplos dos conceitos -->
+    <div class="explanation" id="explanationLambda">
+        <h2>Callbacks em JavaScript</h2>
+        <p>Callbacks são funções que são passadas como argumentos para outras funções e executadas posteriormente. É uma técnica fundamental em JavaScript para lidar com operações assíncronas e eventos.</p>
+
+        <h3>Exemplo de Código</h3>
+        <pre>
+            <code>
+                // Aguarda o carregamento completo do DOM antes de executar o código
+                document.addEventListener("DOMContentLoaded", () => {
+                    // Obtém referências aos elementos do DOM
+                    const button = document.getElementById("myButton");
+                    const output = document.getElementById("output");
+                    const inputValue = document.getElementById("inputValue");
+
+                    // Adiciona um ouvinte de eventos para o clique no botão
+                    button.addEventListener("click", () => {
+                        // Obtém o valor inserido pelo usuário
+                        const userValue = inputValue.value;
+                        
+                        // Chama a função assíncrona passando o valor e uma função de callback
+                        realizarOperacaoAssincrona(userValue, (resultado) => {
+                            // Atualiza o conteúdo do elemento de saída com o resultado
+                            output.textContent = `Resultado da operação: ${resultado}`;
+                        });
+                    });
+
+                    // Função que simula uma operação assíncrona
+                    function realizarOperacaoAssincrona(valor, callback) {
+                        // Simula uma operação assíncrona (por exemplo, uma requisição AJAX)
+                        setTimeout(() => {
+                            // Gera um resultado aleatório com base em uma condição
+                            const resultado =
+                                Math.random() > 0.5 ? `Sucesso com ${valor}` : `Erro com ${valor}`;
+                            // Chama a função de callback passando o resultado
+                            callback(resultado);
+                        }, 2000);
+                    }
+                });
+            </code>
+        </pre>
+    </div>
+
+    <!-- Entradas do usuário -->
+    <div class="explanation" id="explanationLambda">
+        <!-- Formulário de entrada do usuário -->
+        <label for="inputValue">Informe um valor:</label>
+        <input type="text" id="inputValue" placeholder="Digite um valor">
+
+        <!-- Botão para acionar a operação assíncrona -->
+        <button id="myButton">Clique-me para Operação Assíncrona</button>
+        
+        <!-- Área para exibir o resultado da operação -->
+        <div id="output"></div>
+
+        <!-- Botão para voltar à página inicial -->
+        <button onclick="window.location.href='index.html'">Voltar</button>
+    </div>
+
+    <!-- Inclusão do script JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
