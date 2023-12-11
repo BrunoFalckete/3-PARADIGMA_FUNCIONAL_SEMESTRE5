@@ -1,0 +1,79 @@
+/* Estilo global do corpo da página */
+body {
+    font-family: Arial, sans-serif; /* Define a fonte padrão para o corpo da página */
+    margin: 0; /* Remove as margens padrão do corpo */
+    padding: 0; /* Remove o preenchimento padrão do corpo */
+    background-color: #f4f4f4; /* Define a cor de fundo do corpo da página */
+}
+
+/* Estilo do contêiner principal */
+.container {
+    max-width: 800px; /* Define a largura máxima do contêiner principal */
+    margin: 50px auto; /* Centraliza o contêiner horizontalmente com margem superior de 50px */
+    text-align: center; /* Centraliza o conteúdo dentro do contêiner */
+}
+
+/* Estilo do título principal */
+h1 {
+    text-align: center; /* Centraliza o texto do título */
+    color: #4CAF50; /* Define a cor do texto do título */
+}
+
+/* Estilo do contêiner de imagens */
+.image-container {
+    display: flex; /* Utiliza um layout flexível para o contêiner de imagens */
+    flex-wrap: wrap; /* Permite que as imagens se movam para a próxima linha conforme necessário */
+    justify-content: center; /* Centraliza os itens horizontalmente dentro do contêiner */
+    gap: 20px; /* Adiciona espaçamento entre as imagens */
+    margin-top: 20px; /* Adiciona margem superior de 20px */
+}
+
+/* Estilo das imagens na galeria */
+.gallery-image {
+    width: 300px; /* Define a largura das imagens */
+    height: auto; /* Mantém a proporção da altura automaticamente */
+    border-radius: 8px; /* Adiciona bordas arredondadas às imagens */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra sutil às imagens */
+    transition: transform 0.3s ease-in-out; /* Adiciona uma transição suave ao efeito de escala */
+    cursor: pointer; /* Adiciona um cursor ao passar o mouse sobre as imagens */
+}
+
+/* Efeito de escala ao passar o mouse sobre as imagens */
+.gallery-image:hover {
+    transform: scale(1.05);
+}
+
+/* Estilos para os botões */
+button {
+    display: block; /* Faz com que os botões se comportem como blocos */
+    width: 300px; /* Define a largura dos botões */
+    margin: 10px auto; /* Centraliza os botões horizontalmente com margem superior e inferior de 10px */
+    padding: 15px; /* Adiciona preenchimento interno aos botões */
+    font-size: 18px; /* Define o tamanho da fonte dos botões */
+    cursor: pointer; /* Adiciona um cursor ao passar o mouse sobre os botões */
+    background-color: #4CAF50; /* Define a cor de fundo dos botões */
+    color: white; /* Define a cor do texto dos botões */
+    border: none; /* Remove a borda dos botões */
+    border-radius: 4px; /* Adiciona bordas arredondadas aos botões */
+    transition: background-color 0.3s ease; /* Adiciona uma transição suave na mudança de cor de fundo dos botões */
+}
+
+/* Efeito hover para os botões */
+button:hover {
+    background-color: #45a049; /* Nova cor de fundo ao passar o mouse sobre os botões */
+}
+
+/* Remove a borda de foco nos botões */
+button:focus {
+    outline: none;
+}
+
+/* Estilos alternativos para botões ímpares */
+button:nth-child(odd) {
+    background-color: #3498db; /* Cor de fundo alternativa para botões ímpares */
+}
+
+/* Efeito hover para botões ímpares */
+button:nth-child(odd):hover {
+    background-color: #2980b9; /* Nova cor de fundo ao passar o mouse sobre botões ímpares */
+}
